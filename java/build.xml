@@ -6,6 +6,7 @@
   <target name="compile-test" depends="compile">
     <mkdir dir="${classes-test.dir}" />
     <javac srcdir="${test.dir}" destdir="${classes-test.dir}" includeantruntime="false">
+      <compilerarg line="-encoding utf-8"/>
       <classpath>
         <fileset dir="${lib.dir}" includes="**/*.jar"/>
         <pathelement location="${classes.dir}" />
